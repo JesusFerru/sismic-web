@@ -79,7 +79,7 @@ const NavBar = () => {
 										to="/sismic-web/globe-exploration"
 										onClick={freeExplorationHandler}
 										exact="true">
-										Free Exploration
+										Exploración
 									</NavLink>
 								</li>
 								<li className="nav-item">
@@ -87,7 +87,7 @@ const NavBar = () => {
 										className="nav-link custom-link text-light"
 										to="/sismic-web/globe-exploration"
 										onClick={viewTimeSeriesDataHandler}>
-										Time Series Analysis
+										Serie de análisis temporal
 									</NavLink>
 								</li>
 								<li className="nav-item">
@@ -95,7 +95,7 @@ const NavBar = () => {
 										className="nav-link custom-link text-light"
 										onClick={resetContextHandler}
 										to="/sismic-web">
-										Back to Home
+										Volver
 									</NavLink>
 								</li>
 							</>
@@ -106,7 +106,7 @@ const NavBar = () => {
 									className="nav-link custom-link text-light"
 									to="/sismic-web"
 									onClick={resetContextHandler}>
-									Back to Home
+									Volver
 								</NavLink>
 							</li>
 						) : (
@@ -115,7 +115,7 @@ const NavBar = () => {
 									<a
 										className="nav-link custom-link text-light"
 										href="#explore">
-										Luna
+										Algoritmos
 									</a>
 								</li>
 								
