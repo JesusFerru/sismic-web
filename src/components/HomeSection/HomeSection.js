@@ -51,18 +51,14 @@ const HomeSection = () => {
 
         <button
 			className={styles["moon-button"]}
-			style={{ top: "3%", left: "11%" }}  
 			onClick={handleLunaButtonClick}
 		>
-			Luna
 		</button>
 
 		<button
 			className={styles["mars-button"]}
-			style={{ top: "10%", right: "12%" }} 
 			onClick={handleMarteButtonClick}
 		>
-			Marte
 		</button>
       </div>
     </div>

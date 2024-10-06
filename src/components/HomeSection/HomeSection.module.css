@@ -14,7 +14,7 @@
   }
   
   .text {
-	position: absolute;
+	position: fixed;
 	font-size: 48px; 
 	cursor: pointer;
 	transition: font-size 0.3s ease;
@@ -37,32 +37,30 @@
   }
   
   .moon-button {
-    position: absolute;
+    position: fixed;
+    inset: 0;
+    right: 60%;
     background: transparent;
     border: 2px solid transparent; 
     color: white;
-    width: 300px; 
-    height: 300px;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;     
 }
 
   .mars-button {
-    position: absolute;
+    position: fixed;
+    inset: 0;
+    left: 40%;
     background: transparent;
     border: 2px solid transparent; 
     color: white;
-    width: 600px; 
-    height: 600px;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;     
@@ -99,6 +97,10 @@
 		top: 0;
 		bottom: 0;
 	}
+
+  .text {
+    font-size: 28px;
+  }
 }
 
 @media (min-width: 2168px) {
