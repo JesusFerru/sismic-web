@@ -1,149 +1,62 @@
 import React, { useContext } from "react";
 import DataContext from "../../../../store/data-context";
 import styles from "./TimeSeriesChart.module.css";
-import { Line } from "react-chartjs-2";
-import { Chart as ChartJS } from "chart.js/auto";
+import { AlgorithmsModal } from "./AlgorithmsModal";
+
+function ConditionalRenderer() {
+  const dataContext = useContext(DataContext);
+  const type = dataContext.viewTimeSeriesData.type ?? "";
+
+  if (type === "data-analysis") {
+    return (
+      <div className={`${styles["chart-img"]}`}>
+        <img alt="analysis" src="/images/grafica_lunar.png" />;
+      </div>
+    );
+  }
+
+  if (type === "moon-algorithm") {
+    return (
+      <AlgorithmsModal>
+        <p className={styles["modal-title"]}>Comparacion de algoritmos lunares</p>
+        <p className={styles["modal-text"]}>Señal de velocidad en función de tiempo absoluto</p>
+        <img src="/images/analisis-velocidad-sismica.jpeg" alt="Analisis velocidad sísmica"/>
+
+        <p className={styles["modal-title"]}>Predicciones en 30 años</p>
+        <img src="/images/velocidad-prediccion-30.jpeg" alt="Análisis predicción"/>
+
+      </AlgorithmsModal>
+    );
+  }
+
+  if (type === "mars-algorithm") {
+    return (
+      <AlgorithmsModal>
+        <p className={styles["modal-title"]}>Comparacion de algoritmos de Marte</p>
+        <p className={styles["modal-text"]}>Señal de velocidad en función de tiempo absoluto</p>
+        <img src="/images/analisis-velocidad-sismica.jpeg" alt="Analisis velocidad sísmica"/>
+
+        <p className={styles["modal-title"]}>Predicciones en 30 años</p>
+        <img src="/images/velocidad-prediccion-30.jpeg" alt="Análisis predicción"/>
+
+      </AlgorithmsModal>
+    );;
+  }
+  return <div> UNKNOWN </div>;
+}
 
 const TimeSeriesChart = (props) => {
-	const dataContext = useContext(DataContext);
+  const dataContext = useContext(DataContext);
 
-	const dataVisibilities = {
-		"Shallow Moonquake": dataContext.viewTimeSeriesData.shallowMoonquakes,
-		"Deep Moonquake": dataContext.viewTimeSeriesData.deepMoonquakes,
-		"Meteorite Impact": dataContext.viewTimeSeriesData.meteoriteImpacts,
-		"Artificial Impact": dataContext.viewTimeSeriesData.artificialImpacts,
-	};
-
-	const dataTypeColors = {
-		"Shallow Moonquake": "rgb(239, 255, 92)",
-		"Deep Moonquake": "rgb(170, 0, 190)",
-		"Meteorite Impact": "rgb(0, 175, 90)",
-		"Artificial Impact": "rgb(0, 205, 255)",
-	};
-
-	const countByYearAndType = (data) => {
-		const counts = {};
-
-		data.forEach((item) => {
-			const { year, type: typeArray } = item;
-			const type = typeArray[1];
-
-			if (!counts[year]) {
-				counts[year] = {};
-			}
-
-			if (!counts[year][type]) {
-				counts[year][type] = 1;
-			} else {
-				counts[year][type]++;
-			}
-		});
-
-		return counts;
-	};
-
-	const counts = countByYearAndType(props.data);
-	const years = Object.keys(counts);
-	const types = Array.from(
-		new Set(Object.values(counts).flatMap((types) => Object.keys(types)))
-	);
-
-	const datasets = types
-		.filter((type) => dataVisibilities[type])
-		.map((type) => ({
-			label: type,
-			data: years.map((year) => counts[year][type] || 0),
-			borderColor: dataTypeColors[type],
-			fill: false,
-			tension: 0.4, // Suaviza las líneas, dando un aspecto de "signal"
-		}));
-
-	const chartData = {
-		labels: years,
-		datasets,
-	};
-
-	const chartOptions = {
-		maintainAspectRatio: false,
-		responsive: true,
-		scales: {
-			x: {
-				title: {
-					display: true,
-					text: "Year",
-					font: {
-						size: 14,
-						color: "white",
-						family: "Futura PT",
-						weight: "lighter",
-					},
-					color: "white",
-				},
-				ticks: {
-					color: "white",
-					font: {
-						size: 10,
-						family: "Futura PT",
-						color: "white",
-						weight: "lighter",
-					},
-				},
-			},
-			y: {
-				title: {
-					display: true,
-					text: "Amplitude",
-					font: {
-						size: 14,
-						family: "Futura PT",
-						weight: "lighter",
-					},
-					color: "white",
-				},
-				ticks: {
-					color: "white",
-					font: {
-						size: 10,
-						family: "Futura PT",
-						color: "white",
-					},
-				},
-			},
-		},
-		plugins: {
-			legend: false,
-			tooltip: {
-				enabled: true,
-				titleFont: {
-					size: 20,
-					family: "Futura PT",
-					weight: "lighter",
-					color: "white",
-				},
-				bodyFont: {
-					size: 16,
-					family: "Futura PT",
-					weight: "lighter",
-					color: "white",
-				},
-				footerFont: {
-					size: 14,
-					family: "Futura PT",
-					weight: "lighter",
-					color: "white",
-				},
-			},
-		},
-	};
-
-	return <div
-	className={`${styles["chart"]} ${
-		dataContext.viewTimeSeriesData.on ? styles["show"] : ""
-	}`}>
-		<div className={`${styles["chart-img"]}`}>
-			<img src="/images/grafica_lunar.png"/>
-		</div>
-	</div>
+  return (
+    <div
+      className={`${styles["chart"]} ${
+        dataContext.viewTimeSeriesData.on ? styles["show"] : ""
+      }`}
+    >
+      <ConditionalRenderer />
+    </div>
+  );
 };
 
 export default TimeSeriesChart;

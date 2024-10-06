@@ -104,6 +104,14 @@
 	z-index: 10;
 }
 
+.modal-title {
+	font-weight: 500;
+}
+
+.modal-text {
+	font-size: 0.9em
+}
+
 @media (max-width: 768px) {
 	.chart {
 		width: 35%;

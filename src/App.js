@@ -23,7 +23,7 @@ const App = () => {
 						element={<GlobeExplorationMoonPage />}
 					/>
 					<Route
-						path="/sismic-web/unreal-engine-exploration"
+						path="/sismic-web/mars-exploration"
 						element={<GlobeExplorationMarsPage />}
 					/>
 					<Route path="*" element={<LandingPage />} />

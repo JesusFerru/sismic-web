@@ -53,15 +53,6 @@ const ExplorationMenu = (props) => {
 	return (
 		<>
 			<div className={styles["exploration-menu"]}>
-				{!isMars && <div ref={button5Ref} className={styles["hide"]}>
-					<button
-						className={
-							dataContext.landingSites ? styles["active"] : ""
-						}
-						onClick={dataContext.toggleLandingSites}>
-						Apollo Mission Landing Sites
-					</button>
-				</div>}
 				<div
 					ref={button6Ref}
 					className={styles["hide"]}
@@ -73,14 +64,15 @@ const ExplorationMenu = (props) => {
 						className={
 							dataContext.selectedQuake ? styles["active"] : ""
 						}
-						disabled={dataContext.viewTimeSeriesData.on}
+						// disabled={dataContext.viewTimeSeriesData.on}
+						disabled
 						value={
 							dataContext.viewTimeSeriesData.on
 								? ""
 								: JSON.stringify(dataContext.selectedQuake)
 						}
 						onChange={quakeChangeHandler}>
-						<option value="">Select a Seismic Event</option>
+						<option value="">{isMars?"Planeta Marte":"Luna"}</option>
 						{nakamura1979MoonquakeData.map((quake, idx) => {
 							return (
 								<option

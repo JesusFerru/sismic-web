@@ -15,7 +15,7 @@ const HomeSection = () => {
   };
 
   const handleMarteButtonClick = () => {
-    navigate("/sismic-web/unreal-engine-exploration");
+    navigate("/sismic-web/mars-exploration");
   };
 
   const handleLunaClick = () => {
@@ -50,17 +50,29 @@ const HomeSection = () => {
         </span>
 
         <button
-			className={styles["moon-button"]}
-			onClick={handleLunaButtonClick}
-		>
-		</button>
+          className={styles["moon-button"]}
+          onClick={handleLunaButtonClick}
+        ></button>
 
-		<button
-			className={styles["mars-button"]}
-			onClick={handleMarteButtonClick}
-		>
-		</button>
+        <button
+          className={styles["mars-button"]}
+          onClick={handleMarteButtonClick}
+        ></button>
       </div>
+
+      <span
+        ref={elementRef}
+        className={`${styles["text"]} ${styles["title-text"]} `}
+      >
+        Sismic
+      </span>
+
+      <span
+        ref={elementRef}
+        className={`${styles["text"]} ${styles["presentation-text"]}`}
+      >
+        Analizando el pasado para visualizar del futuro.
+      </span>
     </div>
   );
 };
