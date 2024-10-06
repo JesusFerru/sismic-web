@@ -13,7 +13,7 @@ const ContactSection = () => {
 				<div className="container">
 					<SectionHeader
 						titleText="Contact Us"
-						subtitleText="Get in touch with the team behind LUNA."
+						subtitleText="Get in touch with the team behind Lunar Trek."
 					/>
 					<div className={`${styles["contact-container"]}`}>
 						<div>
@@ -23,7 +23,7 @@ const ContactSection = () => {
 								We are a group of passionate computer
 								engineering students from Alexandria University
 								who are fascinated by space exploration. We
-								developed LUNA to participate in NASA's
+								developed Lunar Trek to participate in NASA's
 								International Space Apps Challenge. Our goal is
 								to contribute our skills and knowledge while
 								inspiring others' passion for the cosmos.

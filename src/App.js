@@ -5,6 +5,7 @@ import Background from "./components/Background/Background";
 import ScrollToTop from "./pages/ScrollToTop";
 import LandingPage from "./pages/LandingPage";
 import GlobeExplorationMoonPage from "./pages/GlobeExplorationMoonPage";
+import GlobeExplorationMarsPage from "./pages/GlobeExplorationMarsPage";
 import UnrealEngineExplorationPage from "./pages/UnrealEngineExplorationPage";
 import DataProvider from "./store/DataProvider";
 
@@ -23,7 +24,7 @@ const App = () => {
 					/>
 					<Route
 						path="/lunar-trek/unreal-engine-exploration"
-						element={<UnrealEngineExplorationPage />}
+						element={<GlobeExplorationMarsPage />}
 					/>
 					<Route path="*" element={<LandingPage />} />
 				</Routes>

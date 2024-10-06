@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
-import moon from "../../../../assets/images/moon.jpg";
+import mars from "../../../../assets/images/mars.jpg";
 import topography from "../../../../assets/images/topography.jpg";
 import DataContext from "../../../../store/data-context";
 
-const Moon = () => {
-	const moonTexture = useLoader(TextureLoader, moon);
+const Mars = () => {
+	const marsTexture = useLoader(TextureLoader, mars);
 	const topographyTexture = useLoader(TextureLoader, topography);
 	const dataContext = useContext(DataContext);
 
@@ -20,11 +20,11 @@ const Moon = () => {
 				map={
 					dataContext.topographicView === true
 						? topographyTexture
-						: moonTexture
+						: marsTexture
 				}
 			/>
 		</mesh>
 	);
 };
 
-export default Moon;
+export default Mars;
