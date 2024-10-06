@@ -117,17 +117,6 @@ const ExplorationMarkers = (props) => {
 						longitude={dataContext.selectedQuake.longitude}
 					/>
 				)}
-			{dataContext.viewTimeSeriesData.on &&
-				completeMoonquakeData.map((quake, index) => {
-					return (
-						<Marker
-							key={"TS - " + index}
-							type={quake.type[0]}
-							latitude={quake.latitude}
-							longitude={quake.longitude}
-						/>
-					);
-				})}
 		</>
 	);
 };

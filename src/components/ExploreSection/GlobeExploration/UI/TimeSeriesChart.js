@@ -55,6 +55,7 @@ const TimeSeriesChart = (props) => {
 			data: years.map((year) => counts[year][type] || 0),
 			borderColor: dataTypeColors[type],
 			fill: false,
+			tension: 0.4, // Suaviza las líneas, dando un aspecto de "signal"
 		}));
 
 	const chartData = {
@@ -91,7 +92,7 @@ const TimeSeriesChart = (props) => {
 			y: {
 				title: {
 					display: true,
-					text: "Number of Seismic Events",
+					text: "Amplitude",
 					font: {
 						size: 14,
 						family: "Futura PT",
@@ -135,26 +136,14 @@ const TimeSeriesChart = (props) => {
 		},
 	};
 
-	return (
-		<div
-			className={`${styles["chart"]} ${
-				dataContext.viewTimeSeriesData.on ? styles["show"] : ""
-			}`}>
-			<div className={styles["chart-legend"]}>
-				<label className="text-light">Shallow Moonquakes</label>
-				<div className={styles["shallow-legend"]} />
-				<label className="text-light">Deep Moonquakes</label>
-				<div className={styles["deep-legend"]} />
-				<label className="text-light">Meteorite Impacts</label>
-				<div className={styles["meteorite-legend"]} />
-				<label className="text-light">Artificial Impacts</label>
-				<div className={styles["artificial-legend"]} />
-			</div>
-			<div className={styles["chart-container"]}>
-				<Line data={chartData} options={chartOptions} />
-			</div>
+	return <div
+	className={`${styles["chart"]} ${
+		dataContext.viewTimeSeriesData.on ? styles["show"] : ""
+	}`}>
+		<div className={`${styles["chart-img"]}`}>
+			<img src="/images/grafica_lunar.png"/>
 		</div>
-	);
+	</div>
 };
 
 export default TimeSeriesChart;

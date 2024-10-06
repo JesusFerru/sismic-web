@@ -34,7 +34,7 @@ const NavBar = () => {
 			on: true,
 			shallowMoonquakes: true,
 			deepMoonquakes: true,
-			meteoriteImpacts: true,
+			// meteoriteImpacts: true,
 			artificialImpacts: true,
 		});
 	};
