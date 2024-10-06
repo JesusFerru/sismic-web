@@ -2,8 +2,11 @@ import { useState } from "react";
 import styles from "./HomeSection.module.css";
 import useAnimate from "../../hooks/use-animate";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HomeSection = () => {
+  const { t } = useTranslation();
+
   const [lunaSize, setLunaSize] = useState(false);
   const [marteSize, setMarteSize] = useState(false);
   const elementRef = useAnimate(styles["animate"]);
@@ -37,7 +40,7 @@ const HomeSection = () => {
           }`}
           onClick={handleLunaClick}
         >
-          Luna
+          {t("moon")}
         </span>
 
         <span
@@ -46,7 +49,7 @@ const HomeSection = () => {
           }`}
           onClick={handleMarteClick}
         >
-          Marte
+          {t("mars")}
         </span>
 
         <button
@@ -71,7 +74,7 @@ const HomeSection = () => {
         ref={elementRef}
         className={`${styles["text"]} ${styles["presentation-text"]}`}
       >
-        Analizando el pasado para visualizar del futuro.
+        {t("slogan")}
       </span>
     </div>
   );

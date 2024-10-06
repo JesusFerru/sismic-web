@@ -2,10 +2,13 @@ import { useState, useEffect, useContext } from "react";
 import styles from "./NavBar.module.css";
 import { NavLink, useLocation } from "react-router-dom";
 import DataContext from "../../store/data-context";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const currentPath = useLocation().pathname;
+  const { t } = useTranslation();
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -70,6 +73,7 @@ const NavBar = () => {
         scrolled ? styles["new-top-nav"] : ""
       }`}
     >
+      <LanguageSwitcher />
       <div className="container topnav-container">
         <button
           className="navbar-toggler"
@@ -93,7 +97,7 @@ const NavBar = () => {
                     onClick={freeExplorationHandler}
                     exact="true"
                   >
-                    Exploración
+                    {t("exploration")}
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -102,7 +106,7 @@ const NavBar = () => {
                     to="/sismic-web/globe-exploration"
                     onClick={viewDataAnalysis}
                   >
-                    Análisis
+                    {t("analysis")}
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -111,7 +115,7 @@ const NavBar = () => {
                     to="/sismic-web/globe-exploration"
                     onClick={viewMoonAlgorithm}
                   >
-                    Algoritmos {/* LUNA */}
+                    {t("algorithms")} {/* LUNA */}
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -120,7 +124,7 @@ const NavBar = () => {
                     onClick={resetContextHandler}
                     to="/sismic-web"
                   >
-                    Volver
+                    {t("back")}
                   </NavLink>
                 </li>
               </>
@@ -133,7 +137,7 @@ const NavBar = () => {
                     onClick={freeExplorationHandler}
                     exact="true"
                   >
-                    Exploración
+                    {t("exploration")}
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -142,7 +146,7 @@ const NavBar = () => {
                     to="/sismic-web/mars-exploration"
                     onClick={viewDataAnalysis}
                   >
-                    Análisis {/* MARTE */}
+                    {t("analysis")} {/* MARTE */}
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -151,7 +155,7 @@ const NavBar = () => {
                     to="/sismic-web/mars-exploration"
                     onClick={viewMarsAlgorithms}
                   >
-                    Algoritmos {/* MARTE */}
+                    {t("algorithms")} {/* MARTE */}
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -160,7 +164,7 @@ const NavBar = () => {
                     to="/sismic-web"
                     onClick={resetContextHandler}
                   >
-                    Volver
+                    {t("back")}
                   </NavLink>
                 </li>
               </>
@@ -168,7 +172,7 @@ const NavBar = () => {
               <>
                 <li className="nav-item">
                   <button className="nav-link custom-link text-light" href="#">
-                    Inicio
+                  {t("start")}
                   </button>
                 </li>
                 <li className="nav-item">
@@ -177,7 +181,7 @@ const NavBar = () => {
                     to="/sismic-web/globe-exploration"
                     onClick={resetContextHandler}
                   >
-                    Luna
+                    {t("moon")}
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -186,7 +190,7 @@ const NavBar = () => {
                     to="/sismic-web/mars-exploration"
                     onClick={resetContextHandler}
                   >
-                    Marte
+                    {t("mars")}
                   </NavLink>
                 </li>
                 <li className="nav-item">

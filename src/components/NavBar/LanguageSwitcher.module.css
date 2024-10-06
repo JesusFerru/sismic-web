@@ -1,0 +1,19 @@
+.selector-container {
+    position: fixed;
+    right: 10px;
+    top: 18px;
+}
+
+.selector-container select {
+    padding: 4px 2px;
+    font-size: 14px;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+}
+
+.selector-container option {
+    padding: 4px 2px;
+    background: black;
+    color: white;
+}
