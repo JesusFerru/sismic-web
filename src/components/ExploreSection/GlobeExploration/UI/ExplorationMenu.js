@@ -53,18 +53,6 @@ const ExplorationMenu = (props) => {
 	return (
 		<>
 			<div className={styles["exploration-menu"]}>
-				<div ref={button2Ref} className={styles["hide"]}>
-					<button
-						className={
-							dataContext.parallelsAndMeridians
-								? styles["active"]
-								: ""
-						}
-						onClick={dataContext.toggleParallelsAndMeridians}>
-						Parallels and Meridians
-					</button>
-				</div>
-				
 				{!isMars && <div ref={button5Ref} className={styles["hide"]}>
 					<button
 						className={
