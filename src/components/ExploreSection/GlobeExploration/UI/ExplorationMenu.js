@@ -12,7 +12,7 @@ const ExplorationMenu = (props) => {
 	const button5Ref = useAnimate(styles["animate"], false);
 	const button6Ref = useAnimate(styles["animate"], false);
 
-	const { nakamura1979MoonquakeData, lognonne2003MoonquakeData } = props;
+	const { nakamura1979MoonquakeData, lognonne2003MoonquakeData, isMars } = props;
 
 	const dataContext = useContext(DataContext);
 
@@ -53,15 +53,6 @@ const ExplorationMenu = (props) => {
 	return (
 		<>
 			<div className={styles["exploration-menu"]}>
-				<div ref={button1Ref} className={styles["hide"]}>
-					<button
-						className={
-							dataContext.topographicView ? styles["active"] : ""
-						}
-						onClick={dataContext.toggleTopographicView}>
-						Topographic View
-					</button>
-				</div>
 				<div ref={button2Ref} className={styles["hide"]}>
 					<button
 						className={
@@ -74,7 +65,7 @@ const ExplorationMenu = (props) => {
 					</button>
 				</div>
 				
-				<div ref={button5Ref} className={styles["hide"]}>
+				{!isMars && <div ref={button5Ref} className={styles["hide"]}>
 					<button
 						className={
 							dataContext.landingSites ? styles["active"] : ""
@@ -82,7 +73,7 @@ const ExplorationMenu = (props) => {
 						onClick={dataContext.toggleLandingSites}>
 						Apollo Mission Landing Sites
 					</button>
-				</div>
+				</div>}
 				<div
 					ref={button6Ref}
 					className={styles["hide"]}

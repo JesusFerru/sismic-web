@@ -35,6 +35,7 @@ const GlobeExplorationMars = () => {
 					/>
 				</Canvas>
 				<ExplorationMenu
+				    isMars={true}
 					nakamura1979MoonquakeData={nakamura1979MoonquakeData}
 					lognonne2003MoonquakeData={lognonne2003MoonquakeData}
 				/>
