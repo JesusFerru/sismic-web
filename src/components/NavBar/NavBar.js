@@ -71,12 +71,12 @@ const NavBar = () => {
 					className="collapse navbar-collapse"
 					id="navbarSupportedContent">
 					<ul className="navbar-nav ms-auto text-center">
-						{currentPath === "/lunar-trek/globe-exploration" ? (
+						{currentPath === "/sismic-web/globe-exploration" ? (
 							<>
 								<li className="nav-item">
 									<NavLink
 										className="nav-link custom-link text-light"
-										to="/lunar-trek/globe-exploration"
+										to="/sismic-web/globe-exploration"
 										onClick={freeExplorationHandler}
 										exact="true">
 										Free Exploration
@@ -85,7 +85,7 @@ const NavBar = () => {
 								<li className="nav-item">
 									<NavLink
 										className="nav-link custom-link text-light"
-										to="/lunar-trek/globe-exploration"
+										to="/sismic-web/globe-exploration"
 										onClick={viewTimeSeriesDataHandler}>
 										Time Series Analysis
 									</NavLink>
@@ -94,17 +94,17 @@ const NavBar = () => {
 									<NavLink
 										className="nav-link custom-link text-light"
 										onClick={resetContextHandler}
-										to="/lunar-trek">
+										to="/sismic-web">
 										Back to Home
 									</NavLink>
 								</li>
 							</>
 						) : currentPath ===
-						  "/lunar-trek/unreal-engine-exploration" ? (
+						  "/sismic-web/unreal-engine-exploration" ? (
 							<li className="nav-item">
 								<NavLink
 									className="nav-link custom-link text-light"
-									to="/lunar-trek"
+									to="/sismic-web"
 									onClick={resetContextHandler}>
 									Back to Home
 								</NavLink>

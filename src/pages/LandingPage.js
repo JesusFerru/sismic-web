@@ -9,7 +9,6 @@ const LandingPage = () => {
 		<AnimatedPage>
 			<NavBar />
 			<HomeSection />
-			<ExploreSection />
 			
 		</AnimatedPage>
 	);

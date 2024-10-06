@@ -17,13 +17,13 @@ const App = () => {
 			<ScrollToTop />
 			<AnimatePresence mode="wait">
 				<Routes key={location.pathname} location={location}>
-					<Route path="/lunar-trek" element={<LandingPage />} />
+					<Route path="/sismic-web" element={<LandingPage />} />
 					<Route
-						path="/lunar-trek/globe-exploration"
+						path="/sismic-web/globe-exploration"
 						element={<GlobeExplorationMoonPage />}
 					/>
 					<Route
-						path="/lunar-trek/unreal-engine-exploration"
+						path="/sismic-web/unreal-engine-exploration"
 						element={<GlobeExplorationMarsPage />}
 					/>
 					<Route path="*" element={<LandingPage />} />

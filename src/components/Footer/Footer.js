@@ -75,7 +75,7 @@ const Footer = () => {
 				<p className={styles["source-code-link"]}>
 					<Icon
 						link={true}
-						to="https://www.github.com/MohammadHelaly/lunar-trek"
+						to="https://www.github.com/MohammadHelaly/sismic-web"
 						src={githubIcon}
 						alt="GitHub"
 					/>
