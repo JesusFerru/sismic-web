@@ -115,23 +115,10 @@ const NavBar = () => {
 									<a
 										className="nav-link custom-link text-light"
 										href="#explore">
-										Explore Luna
+										Luna
 									</a>
 								</li>
-								<li className="nav-item">
-									<a
-										className="nav-link custom-link text-light"
-										href="#about">
-										About
-									</a>
-								</li>
-								<li className="nav-item">
-									<a
-										className="nav-link custom-link text-light"
-										href="#contact">
-										Contact
-									</a>
-								</li>
+								
 							</>
 						)}
 					</ul>

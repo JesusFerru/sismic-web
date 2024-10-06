@@ -12,7 +12,7 @@ const AboutSection = () => {
 				<div className="container">
 					<SectionHeader
 						textTheme="light"
-						titleText="About Lunar Trek"
+						titleText="About LUNA"
 						subtitleText="Read about the history of lunar seismic events."
 					/>
 					<div className={`text-light ${styles["about-container"]}`}>
@@ -141,9 +141,9 @@ const AboutSection = () => {
 								<br />
 								This immense legacy is what inspired our team to
 								participate in NASA's International Space Apps
-								Challenge and to build Lunar Trek, in order to
+								Challenge and to build LUNA, in order to
 								visualize the seismic events from Nakamura's and
-								Lognonné's catalogues. We hope that Lunar Trek
+								Lognonné's catalogues. We hope that LUNA
 								will help educate and inspire future lunar
 								enthusiasts and scientists.
 							</p>

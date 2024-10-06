@@ -21,14 +21,7 @@ const ExploreSection = () => {
 						<div
 							ref={introRef}
 							className={`${styles["explore-intro"]}`}>
-							<p className="lead">
-								Take to the stars and unearth the secrets hidden
-								under the surface of Earth's moon. Through the
-								power of Unreal Engine 5 and our own custom 3D
-								globe of Luna, you can explore the moon's
-								geological features and learn about the seismic
-								events that shaped our moon as we know it today.
-							</p>
+							
 						</div>
 						<hr />
 						<Link

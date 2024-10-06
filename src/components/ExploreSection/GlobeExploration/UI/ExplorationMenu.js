@@ -73,26 +73,7 @@ const ExplorationMenu = (props) => {
 						Parallels and Meridians
 					</button>
 				</div>
-				<div ref={button3Ref} className={styles["hide"]}>
-					<button
-						className={
-							dataContext.seasAndOceans ? styles["active"] : ""
-						}
-						onClick={dataContext.toggleSeasAndOceans}>
-						Seas and Oceans
-					</button>
-				</div>
-				<div ref={button4Ref} className={styles["hide"]}>
-					<button
-						className={
-							dataContext.cratersAndMountains
-								? styles["active"]
-								: ""
-						}
-						onClick={dataContext.toggleCratersAndMountains}>
-						Craters and Mountains
-					</button>
-				</div>
+				
 				<div ref={button5Ref} className={styles["hide"]}>
 					<button
 						className={
