@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
-import DataContext from "../../../../store/data-context";
+import DataContext from "../../store/data-context";
 
 const Camera = () => {
 	const dataContext = useContext(DataContext);

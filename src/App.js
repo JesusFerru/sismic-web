@@ -1,12 +1,10 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Background from "./components/Background/Background";
-import ScrollToTop from "./pages/ScrollToTop";
-import LandingPage from "./pages/LandingPage";
-import GlobeExplorationMoonPage from "./pages/GlobeExplorationMoonPage";
-import GlobeExplorationMarsPage from "./pages/GlobeExplorationMarsPage";
-import UnrealEngineExplorationPage from "./pages/UnrealEngineExplorationPage";
+import Background from "./components/Background";
+import HomePage from "./pages/HomePage.js";
+import LunaPage from "./pages/LunaPage";
+import MartePage from "./pages/MartePage.js";
 import DataProvider from "./store/DataProvider";
 
 const App = () => {
@@ -14,19 +12,18 @@ const App = () => {
 	return (
 		<DataProvider>
 			<Background />
-			<ScrollToTop />
 			<AnimatePresence mode="wait">
 				<Routes key={location.pathname} location={location}>
-					<Route path="/sismic-web" element={<LandingPage />} />
+					<Route path="/sismic-web" element={<HomePage />} />
 					<Route
 						path="/sismic-web/globe-exploration"
-						element={<GlobeExplorationMoonPage />}
+						element={<LunaPage />}
 					/>
 					<Route
 						path="/sismic-web/mars-exploration"
-						element={<GlobeExplorationMarsPage />}
+						element={<MartePage />}
 					/>
-					<Route path="*" element={<LandingPage />} />
+					<Route path="*" element={<HomePage />} />
 				</Routes>
 			</AnimatePresence>
 		</DataProvider>

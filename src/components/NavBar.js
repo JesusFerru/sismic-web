@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import styles from "./NavBar.module.css";
 import { NavLink, useLocation } from "react-router-dom";
-import DataContext from "../../store/data-context";
+import DataContext from "../store/data-context";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 

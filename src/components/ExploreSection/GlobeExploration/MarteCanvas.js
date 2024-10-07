@@ -1,13 +1,13 @@
 import { Canvas } from "@react-three/fiber";
 import styles from "./GlobeExploration.module.css";
-import Moon from "../../Models3d/Moon";
 import ExplorationMenu from "./UI/ExplorationMenu";
 import TimeSeriesChart from "./UI/TimeSeriesChart";
 import Camera from "../../Models3d/Camera";
 import Space from "../../Models3d/Space";
 import Lights from "../../Models3d/Lights";
+import Mars from "../../Models3d/Mars";
 
-const GlobeExploration = () => {
+const MarteCanvas = () => {
 
 	return (
 		<section className={styles["space"]}>
@@ -16,9 +16,10 @@ const GlobeExploration = () => {
 					<Camera />
 					<Space />
 					<Lights />
-					<Moon />
+					<Mars />
 				</Canvas>
 				<ExplorationMenu
+				    isMars={true}
 				/>
 				<TimeSeriesChart />
 			</div>
@@ -26,4 +27,4 @@ const GlobeExploration = () => {
 	);
 };
 
-export default GlobeExploration;
+export default MarteCanvas;

@@ -1,6 +1,5 @@
 import styles from "./ExploreSection.module.css";
 import useAnimate from "../../hooks/use-animate";
-import SectionHeader from "../Miscellaneous/SectionHeader";
 import { Link } from "react-router-dom";
 
 const ExploreSection = () => {
@@ -12,11 +11,6 @@ const ExploreSection = () => {
 		<section id="explore" className="light-section">
 			<div className="custom-container light-background">
 				<div className="container">
-					<SectionHeader
-						textTheme="dark"
-						titleText="Explore Luna"
-						subtitleText=""
-					/>
 					<div className={`text-dark ${styles["explore-container"]}`}>
 						<div
 							ref={introRef}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./HomeSection.module.css";
-import useAnimate from "../../hooks/use-animate";
+import useAnimate from "../hooks/use-animate";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 

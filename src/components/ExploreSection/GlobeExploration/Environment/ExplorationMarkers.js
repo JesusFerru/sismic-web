@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import DataContext from "../../../../store/data-context";
 import Marker from "./Marker";
-import ParallelsAndMeridians from "./ParallelsAndMeridians";
+import ParallelsAndMeridians from "../../../Models3d/ParallelsAndMeridians";
 
 const ExplorationMarkers = (props) => {
 	const dataContext = useContext(DataContext);

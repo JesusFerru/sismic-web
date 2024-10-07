@@ -1,8 +1,8 @@
-import NavBar from "../components/NavBar/NavBar";
+import NavBar from "../components/NavBar";
 import GlobeExploration from "../components/ExploreSection/GlobeExploration/GlobeExploration";
 import AnimatedPage from "./AnimatedPage";
 
-const GlobeExplorationMoonPage = () => {
+const LunaPage = () => {
 	return (
 		<AnimatedPage>
 			<NavBar />
@@ -11,4 +11,4 @@ const GlobeExplorationMoonPage = () => {
 	);
 };
 
-export default GlobeExplorationMoonPage;
+export default LunaPage;

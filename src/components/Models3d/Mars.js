@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
-import mars from "../../../../assets/images/mars.jpg";
-import topography from "../../../../assets/images/topography.jpg";
-import DataContext from "../../../../store/data-context";
+import mars from "../../assets/images/mars.jpg";
+import topography from "../../assets/images/topography.jpg";
+import DataContext from "../../store/data-context";
 
 const Mars = () => {
 	const marsTexture = useLoader(TextureLoader, mars);
