@@ -88,12 +88,12 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav navbar-nav-custom mx-auto text-center">
-            {currentPath === "/sismic-web/globe-exploration" ? (
+            {currentPath === "/sismic/moon" ? (
               <>
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web/globe-exploration"
+                    to="/sismic/moon"
                     onClick={freeExplorationHandler}
                     exact="true"
                   >
@@ -103,7 +103,7 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web/globe-exploration"
+                    to="/sismic/moon"
                     onClick={viewDataAnalysis}
                   >
                     {t("analysis")}
@@ -112,7 +112,7 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web/globe-exploration"
+                    to="/sismic/moon"
                     onClick={viewMoonAlgorithm}
                   >
                     {t("algorithms")} {/* LUNA */}
@@ -122,18 +122,18 @@ const NavBar = () => {
                   <NavLink
                     className="nav-link custom-link text-light"
                     onClick={resetContextHandler}
-                    to="/sismic-web"
+                    to="/sismic"
                   >
                     {t("back")}
                   </NavLink>
                 </li>
               </>
-            ) : currentPath === "/sismic-web/mars-exploration" ? (
+            ) : currentPath === "/sismic/mars" ? (
               <>
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web/mars-exploration"
+                    to="/sismic/mars"
                     onClick={freeExplorationHandler}
                     exact="true"
                   >
@@ -143,7 +143,7 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web/mars-exploration"
+                    to="/sismic/mars"
                     onClick={viewDataAnalysis}
                   >
                     {t("analysis")} {/* MARTE */}
@@ -152,7 +152,7 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web/mars-exploration"
+                    to="/sismic/mars"
                     onClick={viewMarsAlgorithms}
                   >
                     {t("algorithms")} {/* MARTE */}
@@ -161,7 +161,7 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web"
+                    to="/sismic"
                     onClick={resetContextHandler}
                   >
                     {t("back")}
@@ -178,7 +178,7 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web/globe-exploration"
+                    to="/sismic/moon"
                     onClick={resetContextHandler}
                   >
                     {t("moon")}
@@ -187,7 +187,7 @@ const NavBar = () => {
                 <li className="nav-item">
                   <NavLink
                     className="nav-link custom-link text-light"
-                    to="/sismic-web/mars-exploration"
+                    to="/sismic/mars"
                     onClick={resetContextHandler}
                   >
                     {t("mars")}

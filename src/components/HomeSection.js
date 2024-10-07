@@ -14,11 +14,11 @@ const HomeSection = () => {
 
   // Funciones para los botones de navegación
   const handleLunaButtonClick = () => {
-    navigate("/sismic-web/globe-exploration");
+    navigate("/sismic/moon");
   };
 
   const handleMarteButtonClick = () => {
-    navigate("/sismic-web/mars-exploration");
+    navigate("/sismic/mars");
   };
 
   const handleLunaClick = () => {

@@ -14,9 +14,9 @@ const App = () => {
       <Background />
       <AnimatePresence mode="wait">
         <Routes key={location.pathname} location={location}>
-          <Route path="/sismic-web" element={<HomePage />} />
-          <Route path="/sismic-web/globe-exploration" element={<LunaPage />} />
-          <Route path="/sismic-web/mars-exploration" element={<MartePage />} />
+          <Route path="/sismic" element={<HomePage />} />
+          <Route path="/sismic/moon" element={<LunaPage />} />
+          <Route path="/sismic/mars" element={<MartePage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </AnimatePresence>
