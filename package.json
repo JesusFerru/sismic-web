@@ -1,5 +1,5 @@
 {
-  "name": "lunar-test",
+  "name": "sismic",
   "dependencies": {
     "@react-three/drei": "^9.86.3",
     "@react-three/fiber": "^8.14.5",
