@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import styles from "./ExplorationMenu.module.css";
-import useAnimate from "../../../../hooks/use-animate";
-import DataContext from "../../../../store/data-context";
+import styles from "./MenuExplorar.module.css";
+import useAnimate from "../hooks/use-animate";
+import DataContext from "../store/data-context";
 import { useTranslation } from "react-i18next";
 
-const ExplorationMenu = (props) => {
+const MenuExplorar = (props) => {
   const button6Ref = useAnimate(styles["animate"], false);
 
   const { isMars } =
@@ -49,4 +49,4 @@ const ExplorationMenu = (props) => {
   );
 };
 
-export default ExplorationMenu;
+export default MenuExplorar;

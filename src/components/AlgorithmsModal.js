@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import DataContext from "../../../../store/data-context";
+import DataContext from "../store/data-context";
 import styles from "./AlgorithmsModal.module.css";
 import ReactDOM from "react-dom";
 

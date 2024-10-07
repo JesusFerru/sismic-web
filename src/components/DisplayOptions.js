@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import DataContext from "../../../../store/data-context";
-import styles from "./TimeSeriesChart.module.css";
+import DataContext from "../store/data-context";
+import styles from "./DisplayOptions.module.css";
 import { AlgorithmsModal } from "./AlgorithmsModal";
 import { useTranslation } from "react-i18next";
 
@@ -58,7 +58,7 @@ function ConditionalRenderer() {
   return <div> UNKNOWN </div>;
 }
 
-const TimeSeriesChart = (props) => {
+const DisplayOptions = (props) => {
   const dataContext = useContext(DataContext);
 
   return (
@@ -72,4 +72,4 @@ const TimeSeriesChart = (props) => {
   );
 };
 
-export default TimeSeriesChart;
+export default DisplayOptions;
