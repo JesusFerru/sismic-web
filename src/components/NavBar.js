@@ -172,7 +172,7 @@ const NavBar = () => {
               <>
                 <li className="nav-item">
                   <button className="nav-link custom-link text-light" href="#">
-                  {t("start")}
+                    {t("start")}
                   </button>
                 </li>
                 <li className="nav-item">

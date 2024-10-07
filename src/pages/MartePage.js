@@ -3,12 +3,12 @@ import MarteCanvas from "../components/MarteCanvas";
 import AnimatedPage from "./AnimatedPage";
 
 const MartePage = () => {
-	return (
-		<AnimatedPage>
-			<NavBar />
-			<MarteCanvas />
-		</AnimatedPage>
-	);
+  return (
+    <AnimatedPage>
+      <NavBar />
+      <MarteCanvas />
+    </AnimatedPage>
+  );
 };
 
 export default MartePage;

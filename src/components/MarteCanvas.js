@@ -8,23 +8,20 @@ import Lights from "./Models3d/Lights";
 import Mars from "./Models3d/Mars";
 
 const MarteCanvas = () => {
-
-	return (
-		<section className={styles["space"]}>
-			<div className={`${styles["exploration-container"]}`}>
-				<Canvas>
-					<Camera />
-					<Space />
-					<Lights />
-					<Mars />
-				</Canvas>
-				<MenuExplorar
-				    isMars={true}
-				/>
-				<DisplayOptions />
-			</div>
-		</section>
-	);
+  return (
+    <section className={styles["space"]}>
+      <div className={`${styles["exploration-container"]}`}>
+        <Canvas>
+          <Camera />
+          <Space />
+          <Lights />
+          <Mars />
+        </Canvas>
+        <MenuExplorar isMars={true} />
+        <DisplayOptions />
+      </div>
+    </section>
+  );
 };
 
 export default MarteCanvas;

@@ -7,8 +7,7 @@ import { useTranslation } from "react-i18next";
 const MenuExplorar = (props) => {
   const button6Ref = useAnimate(styles["animate"], false);
 
-  const { isMars } =
-    props;
+  const { isMars } = props;
 
   const dataContext = useContext(DataContext);
 
